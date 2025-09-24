@@ -1,20 +1,14 @@
 class Student:
-    # amount_of_students = 0
-    # height = 170
-    def __init__(self):
-        # self.height = height
-        # Student.amount_of_students += 1
-        # print(self.height)
-        self.height = 230
-    height = 200
-    def printer(self):
-        print(self.height)
+    amount_of_students = 0
+    def __init__(self, height = 170):
+        self.height = height
+        Student.amount_of_students += 1
+    def grow(self, height):
+        self.height += height
 
 Ira = Student()
-Ira.printer()
-# print(Ira.height)
-# print(Oleksandra.height)
-
-# print(Ira.amount_of_students)
-# print(Oleksandra.amount_of_students)
-
+print("Ira height before growing: ", Ira.height)
+Andriy = Student(height=180)
+Ira.grow(height=5)
+print("Ira height after growing: ", Ira.height)
+print(Andriy.height)
